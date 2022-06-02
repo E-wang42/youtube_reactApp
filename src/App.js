@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Box
+        component="form"
+        sx={{
+          "& > :not(style)": { m: 0, width: "50ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          id="outlined-basic"
+          label="Search Video"
+          variant="outlined"
+        />
+      </Box>
+    );
+  }
 }
 
 export default App;
